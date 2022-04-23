@@ -229,7 +229,7 @@ describe('User APIs', () => {
     describe('TRANSFER  FUNDS', () => {
         it('should transfer funds', (done) => {
             request(app)
-                .post(`/api/v1/wallet/transfer`)
+                .post('/api/v1/wallet/transfer')
                 .set('Accept', 'application/json')
                 .set('Authorization', userToken1)
                 .send({
@@ -247,7 +247,7 @@ describe('User APIs', () => {
 
         it('should throw error if sender account does not exist', (done) => {
             request(app)
-                .post(`/api/v1/user/wallet/transfer`)
+                .post('/api/v1/user/wallet/transfer')
                 .set('Accept', 'application/json')
                 .set('Authorization', userToken1)
                 .send({
@@ -265,7 +265,7 @@ describe('User APIs', () => {
 
         it('should throw error if account is not associated ro user', (done) => {
             request(app)
-                .post(`/api/v1/user/wallet/transfer`)
+                .post('/api/v1/user/wallet/transfer')
                 .set('Accept', 'application/json')
                 .set('Authorization', userToken1)
                 .send({
@@ -283,7 +283,7 @@ describe('User APIs', () => {
 
         it('should throw error if receiver account does not exist', (done) => {
             request(app)
-                .post(`/api/v1/user/wallet/transfer`)
+                .post('/api/v1/user/wallet/transfer')
                 .set('Accept', 'application/json')
                 .set('Authorization', userToken1)
                 .send({
@@ -301,7 +301,7 @@ describe('User APIs', () => {
 
         it('should throw error if amount is greater than balance', (done) => {
             request(app)
-                .post(`/api/v1/user/wallet/transfer`)
+                .post('/api/v1/user/wallet/transfer')
                 .set('Accept', 'application/json')
                 .set('Authorization', userToken1)
                 .send({
